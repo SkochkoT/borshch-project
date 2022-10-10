@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍲 BorshchUA</title>
+    <style>
+      body {
+        display: block;
+        margin: 8px;
+      }
+      .finalProject {
+        display: block;
+        background-image: linear-gradient(to top, #ffebcd 20%, #febf7d 80%);
+        color: white;
+        border-radius: 10px;
+        width: 50%;
+        text-align: center;
+        line-height: 1.5;
+        padding: 15px;
+        margin: 30px auto;
+        color: black;
+      }
+      h1 {
+        color: #c7154e;
+        font-size: 38px;
+        font-weight: bold;
+        margin: 30px auto;
+        border: 1px solid white;
+        border-radius: 4px;
+      }
+      h2 {
+        color: #272044;
+        font-size: 30px;
+        font-weight: normal;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 24px;
+        margin: 10px auto;
+      }
+
+      a:hover {
+        color: #c7154e;
+        text-decoration: underline;
+      }
+
+      button {
+        display: block;
+        color: white;
+        background-color: #c7154e;
+        margin: 30px auto;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: 1px solid #c7154e;
+        border-radius: 50px;
+        box-shadow: 4px 5px 5px grey;
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: transparent;
+        color: #c7154e;
+      }
+
+      .link {
+        color: black;
+        text-decoration: none;
+      }
+      .myLink {
+        text-decoration: none;
+      }
+      .author {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-family: monospace;
+        opacity: 0.6;
+        margin: 18px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="finalProject">
+      <h1>How about Borshch?! <br />😋</h1>
+      <h2>What do you know about <strong>Borshch</strong></h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/247/original/Borshch.jpeg?1656009471"
+      />
+      <hr />
+      <p>
+        <em><strong>Borshch</strong></em> is a signature dish of Ukrainian
+        cuisine, which is greatly enjoyed all over the world. The dish has
+        dozens of variations, due to the wide geography of Ukrainians. The most
+        common are red, green, mushroom, cold borshch and other variations.
+        <br />
+        The etymology of the word "borshch" comes from the name of the
+        borschivnik plant and literally means “notch, tip". After all, the
+        leaves of this plant were originally used to make borshch. Much later,
+        potatoes and beets came to Europe and Ukraine, without which it is
+        difficult to imagine the main dish of Ukrainian cuisine today.
+      </p>
+      <span>
+        Read more on
+        <a
+          href="https://en.wikipedia.org/wiki/Borscht"
+          target="_blank"
+          class="link"
+        >
+          Wikipedia
+        </a>
+      </span>
+
+      <button class="cooking">Try to cook 🧑‍🍳</button>
+
+      <p class="author">Coded by Tetiana Skochko</p>
+    </div>
+
+    <script>
+      function canYouCook(age) {
+        return age >= 12;
+      }
+
+      function cooking() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        if (canYouCook(age)) {
+          alert(`Hello, ${name}! Let's cook it together 👉`);
+          window.location.href = "https://authenticukraine.com.ua/en/food/bors";
+        } else {
+          alert(`Sorry, ${name} , you can only taste Borshch 😉`);
+        }
+      }
+
+      let applyButton = document.querySelector("button");
+      applyButton.addEventListener("click", cooking);
+    </script>
+  </body>
+</html>
